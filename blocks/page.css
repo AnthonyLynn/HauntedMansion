@@ -1,0 +1,6 @@
+.page {
+  position: relative;
+  width: 100%;
+  max-width: 2560px;
+  margin: auto;
+}

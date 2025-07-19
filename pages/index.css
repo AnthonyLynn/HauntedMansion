@@ -1,1 +1,6 @@
 @import url(../vendor/normalize.css);
+@import url(../blocks/page.css);
+@import url(../blocks/nav.css);
+@import url(../blocks/heading.css);
+@import url(../blocks/title.css);
+@import url(../blocks/bat.css);

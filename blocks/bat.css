@@ -1,0 +1,64 @@
+.bat {
+  position: absolute;
+  animation: float-rotate 5s ease-in-out 2.5s infinite alternate both;
+}
+
+.bat_type_1 {
+  top: 641px;
+  right: 302px;
+
+  --time-x: 2.5s;
+  --delay-x: 1s;
+  --time-y: 3.5s;
+  --delay-y: 1.5s;
+}
+
+.bat_type_2 {
+  top: 352px;
+  left: 368px;
+
+  --time-x: 4s;
+  --delay-x: 2s;
+  --time-y: 1.5s;
+  --delay-y: 0.5s;
+}
+
+.bat__float-y {
+  animation: float-y var(--time-x) ease-in-out var(--delay-x) infinite alternate
+    both;
+}
+
+.bat__float-x {
+  animation: float-x var(--time-y) ease-in-out var(--delay-y) infinite alternate
+    both;
+}
+
+@keyframes float-y {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(20%);
+  }
+}
+
+@keyframes float-x {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(20%);
+  }
+}
+
+@keyframes float-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  33% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(15deg);
+  }
+}

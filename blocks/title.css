@@ -1,0 +1,112 @@
+.title {
+  --max-width: 2560;
+  --width-scale: calc(100% / var(--max-width));
+
+  background-image: url(../images/Background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 100%;
+  height: 100vh;
+}
+
+.title__moon {
+  --max-width: 792;
+  --max-top: -451;
+
+  position: absolute;
+  top: calc(-792 * (100% / 2560));
+  left: 50%;
+  translate: -50% 0;
+
+  width: calc((var(--max-width) * var(--width-scale)));
+  max-width: var(--max-width);
+  min-width: 163px;
+
+  animation: spin 120s linear infinite normal none;
+}
+
+.title__house-container {
+  position: absolute;
+  z-index: 70;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+}
+
+.title__house {
+  position: relative;
+  left: 190px;
+
+  width: 100%;
+  max-width: min-content;
+}
+
+.title__mountains {
+  position: absolute;
+  z-index: 50;
+  bottom: 0;
+
+  width: 100%;
+}
+
+.title__gate {
+  position: absolute;
+  z-index: 80;
+  left: 0;
+  bottom: 0;
+}
+
+.title__layer {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  width: 100%;
+  height: 100vh;
+}
+
+.title__layer_type_moon {
+  z-index: 1;
+  animation: come-from-top 2s ease-out 1 normal both;
+}
+
+.title__layer_type_bat {
+  z-index: 60;
+  animation: come-from-top 3s ease-out 1s 1 normal both;
+}
+
+@keyframes come-from-top {
+  0% {
+    transform: translate(-50%, -100vh);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes come-from-bottom {
+  0% {
+    transform: translate(-50%, 100vh);
+  }
+  100% {
+    transform: translate(-50%, 0);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen {
+  .title__moon {
+    top: calc(-792 * (100% / 2560));
+  }
+}

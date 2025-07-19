@@ -1,0 +1,25 @@
+.nav {
+  background-image: url("../images/Nav_Bar.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center calc(100% - 12px);
+
+  width: 100%;
+  max-width: 2560px;
+  min-width: 1236px;
+
+  max-height: 180px;
+  min-height: 100px;
+
+  aspect-ratio: 2560 / 180;
+
+  box-sizing: border-box;
+
+  position: fixed;
+  z-index: 100;
+  left: 50%;
+  transform: translate(-50%, 0);
+
+  display: flex;
+  justify-content: flex-end;
+}

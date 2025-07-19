@@ -1,0 +1,356 @@
+.heading {
+  --heading-width: 2023;
+  --heading-horizontal-padding: 38;
+  --heading-scale: calc(
+    100% / (var(--heading-width) - (var(--heading-horizontal-padding) * 2))
+  );
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 90;
+
+  width: 100%;
+  max-width: calc(var(--heading-width) * 1px);
+  min-width: 244px;
+
+  padding: 0 calc(var(--heading-horizontal-padding) * 1px);
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.heading__line {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  column-gap: calc(72 * var(--heading-scale));
+  row-gap: 20px;
+}
+
+.heading__word {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.heading__letter {
+  position: absolute;
+  display: ruby;
+
+  --delay: 1s;
+
+  animation: pullup 1.5s cubic-bezier(0.165, 0.84, 0.44, 1) var(--delay) 1
+      normal both,
+    letter-tilt 10s step-start var(--delay) infinite alternate none;
+}
+
+.heading__word_type_welcome {
+  --max-width: 1072;
+  --width-scale: calc(100% / var(--max-width));
+
+  --max-height: 217;
+  --height-scale: calc(100% / var(--max-height));
+
+  width: calc(var(--max-width) * var(--heading-scale));
+  max-width: calc(var(--max-width) * 1px);
+  min-width: 244px;
+
+  aspect-ratio: var(--max-width) / var(--max-height);
+}
+
+.heading__word_type_welcome .heading__letter_type_w {
+  width: calc(262 * var(--width-scale));
+  --delay: 0.5s;
+}
+
+.heading__word_type_welcome .heading__letter_type_e {
+  left: calc(240 * var(--width-scale));
+  top: calc(22 * var(--height-scale));
+  width: calc(144 * var(--width-scale));
+  --delay: 1.5s;
+}
+
+.heading__word_type_welcome .heading__letter_type_l {
+  left: calc(371 * var(--width-scale));
+  top: calc(44 * var(--height-scale));
+  width: calc(149 * var(--width-scale));
+  --delay: 2s;
+}
+
+.heading__word_type_welcome .heading__letter_type_c {
+  left: calc(484 * var(--width-scale));
+  top: calc(22 * var(--height-scale));
+  width: calc(165 * var(--width-scale));
+  --delay: 1.3s;
+}
+
+.heading__word_type_welcome .heading__letter_type_o {
+  left: calc(640 * var(--width-scale));
+  top: calc(36 * var(--height-scale));
+  width: calc(152 * var(--width-scale));
+  --delay: 0.6s;
+}
+
+.heading__word_type_welcome .heading__letter_type_m {
+  left: calc(788 * var(--width-scale));
+  top: calc(31 * var(--height-scale));
+  width: calc(176 * var(--width-scale));
+  --delay: 0.9s;
+}
+
+.heading__word_type_welcome .heading__letter_type_e2 {
+  left: calc(968 * var(--width-scale));
+  top: calc(42 * var(--height-scale));
+  width: calc(104 * var(--width-scale));
+  --delay: 1.5s;
+}
+
+.heading__word_type_to {
+  --max-width: 264;
+  --width-scale: calc(100% / var(--max-width));
+
+  --max-height: 215;
+  --height-scale: calc(100% / var(--max-height));
+
+  width: calc(var(--max-width) * var(--heading-scale));
+  max-width: calc(var(--max-width) * 1px);
+  min-width: 60px;
+
+  aspect-ratio: var(--max-width) / var(--max-height);
+}
+
+.heading__word_type_to .heading__letter_type_t {
+  top: calc(30 * var(--height-scale));
+  width: calc(152 * var(--width-scale));
+  --delay: 2.3s;
+}
+
+.heading__word_type_to .heading__letter_type_o {
+  left: calc(136 * var(--width-scale));
+  top: calc(42 * var(--height-scale));
+  width: calc(128 * var(--width-scale));
+  --delay: 0.8s;
+}
+
+.heading__word_type_the {
+  --max-width: 392;
+  --width-scale: calc(100% / var(--max-width));
+
+  --max-height: 210;
+  --height-scale: calc(100% / var(--max-height));
+
+  width: calc(var(--max-width) * var(--heading-scale));
+  max-width: calc(var(--max-width) * 1px);
+  min-width: 89px;
+
+  aspect-ratio: var(--max-width) / var(--max-height);
+}
+
+.heading__word_type_the .heading__letter_type_t {
+  position: absolute;
+  top: calc(11 * var(--height-scale));
+  width: calc(152 * var(--width-scale));
+  --delay: 2.1s;
+}
+
+.heading__word_type_the .heading__letter_type_h {
+  position: absolute;
+  left: calc(120 * var(--width-scale));
+  width: calc(144 * var(--width-scale));
+  --delay: 1.7s;
+}
+
+.heading__word_type_the .heading__letter_type_e {
+  position: absolute;
+  left: calc(232 * var(--width-scale));
+  top: calc(45 * var(--height-scale));
+  width: calc(160 * var(--width-scale));
+  --delay: 0.8s;
+}
+
+.heading__word_type_haunted {
+  --max-width: 912;
+  --width-scale: calc(100% / var(--max-width));
+
+  --max-height: 211;
+  --height-scale: calc(100% / var(--max-height));
+
+  width: calc(var(--max-width) * var(--heading-scale));
+  max-width: calc(var(--max-width) * 1px);
+  min-width: 207px;
+
+  aspect-ratio: var(--max-width) / var(--max-height);
+}
+
+.heading__word_type_haunted .heading__letter_type_h {
+  top: calc(23 * var(--height-scale));
+  width: calc(152 * var(--width-scale));
+  --delay: 1.8s;
+}
+
+.heading__word_type_haunted .heading__letter_type_a {
+  top: calc(4 * var(--height-scale));
+  left: calc(120 * var(--width-scale));
+  width: calc(200 * var(--width-scale));
+  --delay: 2.3s;
+}
+
+.heading__word_type_haunted .heading__letter_type_u {
+  left: calc(313 * var(--width-scale));
+  top: calc(43 * var(--height-scale));
+  width: calc(136 * var(--width-scale));
+  --delay: 1.7s;
+}
+
+.heading__word_type_haunted .heading__letter_type_n {
+  left: calc(440 * var(--width-scale));
+  top: calc(72 * var(--height-scale));
+  width: calc(120 * var(--width-scale));
+  --delay: 1.2s;
+}
+
+.heading__word_type_haunted .heading__letter_type_t {
+  left: calc(552 * var(--width-scale));
+  top: calc(23 * var(--height-scale));
+  width: calc(112 * var(--width-scale));
+  --delay: 2.3s;
+}
+
+.heading__word_type_haunted .heading__letter_type_e {
+  left: calc(640 * var(--width-scale));
+  width: calc(168 * var(--width-scale));
+  --delay: 2.6s;
+}
+
+.heading__word_type_haunted .heading__letter_type_d {
+  left: calc(784 * var(--width-scale));
+  top: calc(23 * var(--height-scale));
+  width: calc(128 * var(--width-scale));
+  --delay: 2s;
+}
+
+.heading__word_type_mansion {
+  --max-width: 1048;
+  --width-scale: calc(100% / var(--max-width));
+
+  --max-height: 210;
+  --height-scale: calc(100% / var(--max-height));
+
+  width: calc(var(--max-width) * var(--heading-scale));
+  max-width: calc(var(--max-width) * 1px);
+  min-width: 238px;
+
+  aspect-ratio: var(--max-width) / var(--max-height);
+}
+
+.heading__word_type_mansion .heading__letter_type_m {
+  top: calc(26 * var(--height-scale));
+  width: calc(208 * var(--width-scale));
+  --delay: 2.2s;
+}
+
+.heading__word_type_mansion .heading__letter_type_a {
+  left: calc(200 * var(--width-scale));
+  top: calc(19 * var(--height-scale));
+  width: calc(144 * var(--width-scale));
+  --delay: 1.6s;
+}
+
+.heading__word_type_mansion .heading__letter_type_n {
+  left: calc(336 * var(--width-scale));
+  top: calc(49 * var(--height-scale));
+  width: calc(168 * var(--width-scale));
+  --delay: 1.5s;
+}
+
+.heading__word_type_mansion .heading__letter_type_s {
+  left: calc(504 * var(--width-scale));
+  top: calc(49 * var(--height-scale));
+  width: calc(128 * var(--width-scale));
+  --delay: 2.1s;
+}
+
+.heading__word_type_mansion .heading__letter_type_i {
+  left: calc(608 * var(--width-scale));
+  width: calc(112 * var(--width-scale));
+  --delay: 2s;
+}
+
+.heading__word_type_mansion .heading__letter_type_o {
+  left: calc(716 * var(--width-scale));
+  top: calc(56 * var(--height-scale));
+  width: calc(160 * var(--width-scale));
+  --delay: 1.8s;
+}
+
+.heading__word_type_mansion .heading__letter_type_n2 {
+  left: calc(896 * var(--width-scale));
+  top: calc(50 * var(--height-scale));
+  width: calc(152 * var(--width-scale));
+  --delay: 2.8s;
+}
+
+@keyframes pullup {
+  0% {
+    translate: 0 100vh;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
+
+@keyframes letter-tilt {
+  0% {
+    rotate: 10deg;
+  }
+  10% {
+    rotate: -8deg;
+  }
+  20% {
+    rotate: 4deg;
+  }
+  30% {
+    rotate: -12deg;
+  }
+  40% {
+    rotate: 13deg;
+  }
+  50% {
+    rotate: -10deg;
+  }
+  60% {
+    rotate: 6deg;
+  }
+  70% {
+    rotate: -8deg;
+  }
+  80% {
+    rotate: 14deg;
+  }
+  90% {
+    rotate: -5deg;
+  }
+  100% {
+    rotate: 3deg;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heading {
+    row-gap: 20px;
+    top: 16%;
+    translate: -50% 0;
+  }
+
+  .heading__line_type_fold {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+}
